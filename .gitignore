@@ -1,0 +1,17 @@
+.DS_Store
+*.bin
+*.elf
+*.hex
+*.map
+*.apk
+*.aab
+*.zip
+*.log
+build/
+.pio/
+.vscode/
+node_modules/
+captures/
+backups/
+secrets/
+.env
