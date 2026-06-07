@@ -65,6 +65,21 @@ struct LightAudioFrame {
 - `onset`: sudden change amount
 - `beat`: transient trigger flag
 
+## Review and simulation
+
+Use the local simulator to inspect how a sequence of synthetic microphone frames maps into visual control values:
+
+```bash
+c++ -std=c++17 -Wall -Wextra -I. tools/simulate_light_audio.cpp -o /tmp/simulate_light_audio
+/tmp/simulate_light_audio
+```
+
+The output is CSV:
+
+```text
+index,avg,peak,level,smoothed,onset,beat
+```
+
 ## Why no FFT yet
 
 The current firmware prioritizes low-latency, low-memory reaction on a small ESP32-C3. The `bass/mid/treble` style mappings can be approximated from energy, smoothed level, and onset. A future FFT stage can be added when the project needs true frequency separation.

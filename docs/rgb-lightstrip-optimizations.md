@@ -2,6 +2,8 @@
 
 These strategies convert microphone features into stable, colorful LED strip behavior.
 
+For a quick mapping table, see [effect-strategy-matrix.md](effect-strategy-matrix.md).
+
 ## 1. Center-out volume bar
 
 Use `smoothed` to decide how many LEDs are lit from the center toward both ends. This gives a readable volume shape even when the strip is moving or viewed from an angle.

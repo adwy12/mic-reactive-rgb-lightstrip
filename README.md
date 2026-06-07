@@ -15,6 +15,7 @@ This repository is a cleaned public snapshot of microphone-driven lightstrip wor
 - A 50 LED center-out visualizer with beat flash accents.
 - Documentation for RGB lightstrip mapping strategies.
 - A host-side C++ test for the audio algorithm.
+- A small simulation tool that prints audio frames as CSV for review.
 
 ## Audio algorithm count
 
@@ -37,6 +38,8 @@ For RGB lightstrip rendering, the current notes describe 8 mapping strategies:
 8. Concert-style charge, burst, comet, and settle phases
 
 See [docs/audio-algorithms.md](docs/audio-algorithms.md) and [docs/rgb-lightstrip-optimizations.md](docs/rgb-lightstrip-optimizations.md).
+
+See [docs/effect-strategy-matrix.md](docs/effect-strategy-matrix.md) for how audio features map to LED behaviors.
 
 ## Hardware target
 
@@ -74,6 +77,25 @@ docs/
 
 tests/
   Host-side algorithm checks.
+
+tools/
+  Local simulation utilities for algorithm review.
+```
+
+## Local checks
+
+Run the host-side test:
+
+```bash
+c++ -std=c++17 -Wall -Wextra -I. tests/test_light_audio.cpp -o /tmp/test_light_audio
+/tmp/test_light_audio
+```
+
+Run the CSV simulation:
+
+```bash
+c++ -std=c++17 -Wall -Wextra -I. tools/simulate_light_audio.cpp -o /tmp/simulate_light_audio
+/tmp/simulate_light_audio
 ```
 
 ## Scope
