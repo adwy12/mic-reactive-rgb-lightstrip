@@ -98,6 +98,12 @@ c++ -std=c++17 -Wall -Wextra -I. tools/simulate_light_audio.cpp -o /tmp/simulate
 /tmp/simulate_light_audio
 ```
 
+Compile the firmware:
+
+```bash
+arduino-cli compile --fqbn esp32:esp32:esp32c3 firmware/mic_visual_effect
+```
+
 ## Scope
 
 This repository is for local microphone-reactive LED strip experiments. It does not include private captures, proprietary firmware images, app dumps, music files, credentials, or commercial device protocol research.
