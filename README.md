@@ -96,6 +96,7 @@ Run the CSV simulation:
 ```bash
 c++ -std=c++17 -Wall -Wextra -I. tools/simulate_light_audio.cpp -o /tmp/simulate_light_audio
 /tmp/simulate_light_audio
+/tmp/simulate_light_audio --sensitivity 80 --noise-reduction 220
 ```
 
 Compile the firmware:
